@@ -1,0 +1,645 @@
+/* Mobile-first CSS til woods_ quiz */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F8F8F6;
+    color: #121212;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .quiz-wrapper {
+    padding: 2rem 1rem;
+    max-width: 100%;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Cormorant', serif;
+    font-weight: 100;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  
+  
+  .microcopy {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  #quiz-start {
+    background: #F8F8F6;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  #quiz-start input[type="text"] {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    margin: 1rem 0;
+  }
+  
+  #quiz-start button {
+    display: block;
+    background: transparent;
+    color: #121212;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border: 1px solid #121212;
+    border-radius: 0;
+    cursor: pointer;
+    margin: 1.5rem auto 0;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+  }
+  
+  .quiz-step-indicator {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .quiz-step-indicator .step {
+    flex: 1;
+    aspect-ratio: 1 / 1; /* Gør dem kvadratiske */
+    text-align: center;
+    font-family: 'Cormorant', serif;
+    font-size: 1rem;
+    background-color: #F8F8F6;
+    color: #121212;
+    border: 1px solid #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0; /* ingen ekstra spacing */
+    margin: 0;  /* ingen mellemrum */
+  }
+  
+  .quiz-step-indicator .step.active {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  
+  .quiz-question {
+    background: #F8F8F6;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+  }
+  
+  .quiz-question button {
+    display: block;
+  background: transparent;
+  color: #121212;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border: 1px solid #121212;
+  border-radius: 0;
+  cursor: pointer;
+  margin: 1.5rem auto 0;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  }
+  
+  .button-row {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .button-row button {
+    display: block;
+  background: transparent;
+  color: #121212;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border: 1px solid #121212;
+  border-radius: 0;
+  cursor: pointer;
+  margin: 1.5rem auto 0;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  }
+  
+  .button-row button:hover {
+    background: #121212;
+    color: #fff;
+  }
+  
+  /* Grid layout til spørgsmål 1 */
+  .grid-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .option-label {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .option-box {
+    background-color: #ffffff;
+    border-radius: 0;
+    color: #121212;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    transition: background 0.2s ease;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  .option-box img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+  }
+  
+  .option-box span {
+    display: block;
+    font-family: 'Cormorant', serif;
+    font-size: 1rem;
+    color: #121212;
+    line-height: 1.4;
+    text-align: center;
+  }
+  
+  .option-label input[type="checkbox"] {
+    display: none;
+  }
+  
+  .option-label input[type="checkbox"]:checked ~ .option-box {
+    background-color: #e0e0e0;
+  }
+  
+  #quiz-result {
+    background: #f8f8f6;
+  }
+  
+  .product-recommendation {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .product {
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    background: #fff;
+  }
+  
+  .product img {
+    width: 80px;
+    margin-bottom: 1rem;
+  }
+  
+  .product h3 {
+    font-family: 'Cormorant', serif;
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+  }
+  
+  .product p {
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
+  /* Tablet og op */
+  @media (min-width: 600px) {
+    .grid-options {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .button-row {
+      flex-direction: row;
+    }
+  
+    .product-recommendation {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .product {
+      flex: 1 1 calc(50% - 1rem);
+    }
+  
+    .product img {
+      width: 100px;
+    }
+  
+    .option-box span br {
+      display: inline;
+    }
+  }
+  
+  /* Skjul <br> på mobil for lange tekster */
+  .option-box span br {
+    display: none;
+  }
+  
+  .quiz-question input[type="radio"] {
+    display: none;
+  }
+  
+  .quiz-question input[type="radio"] + label {
+    display: block;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: normal;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    position: relative;
+    padding-left: 3rem;
+  }
+  
+  .quiz-question input[type="radio"] + label::before {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid #555;
+    border-radius: 50%;
+    background: white;
+  }
+  
+  .quiz-question input[type="radio"]:checked + label::before {
+    background-color: #121212;
+    border-color: #121212;
+  }
+  
+  /* Layout for radio-gruppe (spørgsmål 3) */
+.radio-group label {
+    display: block;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: normal;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    padding-left: 3rem;
+    line-height: 1.5;
+  }
+  
+  /* Skjul den originale radio-knap */
+  .radio-group input[type="radio"] {
+    display: none;
+  }
+  
+  /* Rund cirkel til venstre for teksten */
+  .radio-group label::before {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid #555;
+    border-radius: 50%;
+    background: white;
+  }
+  
+  /* Når valgt – mørk udfyldt cirkel */
+  .radio-group input[type="radio"]:checked + label::before {
+    background-color: #121212;
+    border-color: #121212;
+  }
+  
+  #question-4 .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  #question-4 .radio-group input[type="radio"] {
+    display: none;
+  }
+  
+  #question-4 .radio-group label {
+    display: block;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    padding: 1rem;
+    padding-left: 3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.2s ease;
+  }
+  
+  #question-4 .radio-group label::before {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid #121212;
+    border-radius: 50%;
+    background: white;
+    transition: background-color 0.2s ease;
+  }
+  
+  #question-4 .radio-group input[type="radio"]:checked + label::before {
+    background-color: #121212;
+  }
+  
+  #question-5 .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  #question-5 .checkbox-group input[type="checkbox"] {
+    display: none;
+  }
+  
+  #question-5 .checkbox-group label {
+    display: block;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    padding: 1rem;
+    padding-left: 3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.2s ease;
+    text-align: left;
+  }
+  
+  #question-5 .checkbox-group label::before {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid #121212;
+    background: white;
+  }
+  
+  #question-5 .checkbox-group input[type="checkbox"]:checked + label::before {
+    background-color: #121212;
+  }
+  
+  #question-6 .location-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  #question-6 .location-group input[type="radio"] {
+    display: none;
+  }
+  
+  #question-6 .location-group label {
+    display: block;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    padding: 1rem;
+    padding-left: 3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.2s ease;
+    text-align: left;
+  }
+  
+  #question-6 .location-group label::before {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid #121212;
+    background: white;
+    border-radius: 50%;
+  }
+  
+  #question-6 .location-group input[type="radio"]:checked + label::before {
+    background-color: #121212;
+  }
+  
+/* ========== QUIZ RESULT STYLING ========== */
+
+.quiz-result-heading {
+    font-family: 'Cormorant', serif;
+    font-size: 1.8rem;
+    font-weight: 100;
+    margin: 2rem 0 0.5rem;
+    text-align: center;
+  }
+  
+  .quiz-result-subtext {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #121212;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto 2rem auto;
+    background: #fff;
+    padding: 1.5rem;
+    border: 1px solid #121212;
+  }
+  
+  /* === Fuld bredde wrapper === */
+  .slider-section {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background: #f8f8f6;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    overflow-x: hidden;
+  }
+  
+  /* === Slider container === */
+  .best-sellers-slider {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  
+  .best-sellers-slider::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* === Produktkort === */
+  .slider-card {
+    flex: 0 0 80%;
+    max-width: 320px;
+    scroll-snap-align: start;
+    background: #fff;
+    text-align: center;
+    padding-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    position: relative;
+  }
+  
+  /* === Billede + stjerner === */
+  .product-image-wrapper {
+    position: relative;
+  }
+  
+  .slider-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 0;
+  }
+  
+  /* === Rating og label === */
+  .rating-bar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 0.5rem;
+  }
+  
+  .stars-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .stars {
+    font-size: 14px;
+    color: #121212;
+    letter-spacing: 0.5px;
+  }
+  
+  .reviews {
+    font-size: 13px;
+    color: #666;
+  }
+  
+  /* === Info-boks under billede === */
+  .product-info {
+    background: #f8f8f6;
+    margin-top: -3rem;
+    padding: 1rem 0;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .product-name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin: 0.25rem 0 0.15rem;
+  }
+  
+  .product-price {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .add-to-cart {
+    background: #121212;
+    color: #fff;
+    padding: 0.5rem 1.25rem;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+  }
+  
+  /* === Slider UI indikator === */
+  .slider-indicator {
+    height: 3px;
+    background: #eaeaea;
+    margin-top: 0.5rem;
+    width: 100%;
+    position: relative;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .slider-indicator .slider-progress-bar {
+    height: 3px;
+    background: #121212;
+    width: 33%;
+    transition: width 0.3s ease;
+  }
+  
+  /* === Quiz-indhold med padding === */
+  .quiz-content-wrapper {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: #f8f8f6;
+  }

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurv - Woods Copenhagen</title>
+  <link rel="stylesheet" href="cart.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;1,300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="cart-header">
+    <h1>Kurv</h1>
+    <a href="index.html" class="close-cart">
+      <img src="img/menu_close_icon.png" alt="Luk kurv" />
+    </a>
+  </header>
+
+  <main>
+    <!-- Progress bar (checkout flow) -->
+    <div class="checkout-steps">
+      <div class="checkout-step active">Kurv</div>
+      <div class="checkout-step">Levering</div>
+      <div class="checkout-step">Betaling</div>
+      <div class="progress-bar">
+        <div class="progress-bar-fill"></div>
+      </div>
+    </div>
+
+    <!-- Tom kurv med anbefalinger -->
+    <section id="empty-cart" class="cart-step-section">
+      <div class="empty-cart-content">
+        <h2>Din kurv er tom – men din hud fortjener bedre</h2>
+        <p>Se nogle af vores mest populære produkter, som andre kunder elsker.</p>
+
+        <div class="universal-slider best-sellers-slider">
+          <div class="slider-spacer"></div>
+        
+          <div class="slider-card">
+            <div class="product-image-wrapper">
+              <div class="rating-bar">
+                <span class="bestseller">Best Seller</span>
+                <div class="stars-wrapper">
+                  <span class="stars">★★★★★</span>
+                  <span class="reviews">(38)</span>
+                </div>
+              </div>
+              <img src="img/DAILY HYDRA CREAM GREY BACKGROUND.jpg" alt="Daily Hydra Cream">
+            </div>
+            <div class="product-info">
+              <p class="product-name">Daily Hydra Cream</p>
+              <p class="product-price">369,00 DKK</p>
+              <a href="cart.html" class="add-to-cart">LÆG I KURV</a>
+            </div>
+          </div>
+        
+          <div class="slider-card">
+            <div class="product-image-wrapper">
+              <div class="rating-bar">
+                <span class="bestseller">Best Seller</span>
+                <div class="stars-wrapper">
+                  <span class="stars">★★★★★</span>
+                  <span class="reviews">(25)</span>
+                </div>
+              </div>
+              <img src="img/FACIAL SUNSCREEN 30 SPF GREY BACKGROUND.jpg" alt="Facial Sunscreen">
+            </div>
+            <div class="product-info">
+              <p class="product-name">Facial Sunscreen SPF 30</p>
+              <p class="product-price">179,00 DKK</p>
+              <a href="cart.html" class="add-to-cart">LÆG I KURV</a>
+            </div>
+          </div>
+        
+          <div class="slider-card">
+            <div class="product-image-wrapper">
+              <div class="rating-bar">
+                <span class="bestseller">Best Seller</span>
+                <div class="stars-wrapper">
+                  <span class="stars">★★★★★</span>
+                  <span class="reviews">(33)</span>
+                </div>
+              </div>
+              <img src="img/INTENSE HYALURONIC MASK GREY BACKGROUND.jpg" alt="Intense Hyaluronic Mask">
+            </div>
+            <div class="product-info">
+              <p class="product-name">Intense Hyaluronic Mask</p>
+              <p class="product-price">329,00 DKK</p>
+              <a href="cart.html" class="add-to-cart">LÆG I KURV</a>
+            </div>
+          </div>
+        
+          <div class="slider-card">
+            <div class="product-image-wrapper">
+              <div class="rating-bar">
+                <span class="bestseller">Best Seller</span>
+                <div class="stars-wrapper">
+                  <span class="stars">★★★★★</span>
+                  <span class="reviews">(41)</span>
+                </div>
+              </div>
+              <img src="img/NIACINAMIDE LIFTING MIST GREY BACKGROUND.jpg" alt="Lifting Mist">
+            </div>
+            <div class="product-info">
+              <p class="product-name">Niacinamide Lifting Mist</p>
+              <p class="product-price">229,00 DKK</p>
+              <a href="cart.html" class="add-to-cart">LÆG I KURV</a>
+            </div>
+          </div>
+        
+          <div class="slider-card">
+            <div class="product-image-wrapper">
+              <div class="rating-bar">
+                <span class="bestseller">Best Seller</span>
+                <div class="stars-wrapper">
+                  <span class="stars">★★★★★</span>
+                  <span class="reviews">(29)</span>
+                </div>
+              </div>
+              <img src="img/CLEANSING BALM GREY BACKGROUND.jpg" alt="Cleansing Balm">
+            </div>
+            <div class="product-info">
+              <p class="product-name">Cleansing Balm</p>
+              <p class="product-price">279,00 DKK</p>
+              <a href="cart.html" class="add-to-cart">LÆG I KURV</a>
+            </div>
+          </div>
+        
+          <div class="slider-card">
+            <div class="product-image-wrapper">
+              <div class="rating-bar">
+                <span class="bestseller">Best Seller</span>
+                <div class="stars-wrapper">
+                  <span class="stars">★★★★★</span>
+                  <span class="reviews">(18)</span>
+                </div>
+              </div>
+              <img src="img/SUN DROPS GREY BACKGROUND.jpg" alt="Sun Drops">
+            </div>
+            <div class="product-info">
+              <p class="product-name">Sun Drops</p>
+              <p class="product-price">259,00 DKK</p>
+              <a href="cart.html" class="add-to-cart">LÆG I KURV</a>
+            </div>
+          </div>
+        
+          <div class="slider-spacer"></div>
+        </div>
+        
+
+        <!-- slider-progress-bar -->
+        <div class="slider-indicator">
+          <div class="slider-progress-bar"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 1: Kurv -->
+    <section id="step-cart" class="cart-step-section">
+      <div class="summary">
+        <label for="discount">Rabatkode</label>
+        <input type="text" id="discount" placeholder="Indtast kode">
+        <button class="apply-btn">Tilføj</button>
+
+        <div class="shipping-info">
+          <p>Køb for <strong>500,00 kr</strong> mere og modtag <strong>gratis fragt</strong></p>
+        </div>
+
+        <p class="subtotal">Subtotal: <strong>0,00 kr</strong></p>
+        <button id="go-to-step2" class="btn-primary">Gå til levering</button>
+        <a href="index.html" class="secondary-link">eller fortsæt med at shoppe</a>
+      </div>
+    </section>
+
+    <!-- Step 2: Levering -->
+    <section id="step-shipping" class="cart-step-section hidden">
+      <h2>Leveringsoplysninger</h2>
+      <form class="shipping-form">
+        <input type="text" placeholder="Fornavn" required>
+        <input type="text" placeholder="Efternavn" required>
+        <input type="text" placeholder="Adresse" required>
+        <input type="text" placeholder="Postnummer og by" required>
+        <input type="email" placeholder="Email" required>
+      </form>
+
+      <div class="shipping-options">
+        <h3>Vælg leveringsmetode</h3>
+        <label><input type="radio" name="shipping" checked> GLS - Pakkeshop (Gratis)</label>
+        <label><input type="radio" name="shipping"> DAO - Hjemmelevering (29,00 kr)</label>
+      </div>
+
+      <div class="navigation-buttons">
+        <button id="go-back-to-cart" class="secondary-button">← Tilbage</button>
+        <button id="go-to-step3" class="btn-primary">Gå til betaling</button>
+      </div>
+    </section>
+
+    <!-- Step 3: Betaling -->
+    <section id="step-payment" class="cart-step-section hidden">
+      <h2>Betaling</h2>
+      <form class="payment-form">
+        <input type="text" placeholder="Kortnummer" required>
+        <input type="text" placeholder="Udløbsdato (MM/ÅÅ)" required>
+        <input type="text" placeholder="CVC" required>
+      </form>
+
+      <div class="navigation-buttons">
+        <button id="go-back-to-shipping" class="secondary-button">← Tilbage</button>
+        <button class="btn-primary">Bekræft og betal</button>
+      </div>
+
+      <p class="terms">Ved at betale accepterer du vores <a href="#">handelsbetingelser</a> og <a href="#">privatlivspolitik</a>.</p>
+    </section>
+  </main>
+
+  <script src="cart.js"></script>
+</body>
+</html>

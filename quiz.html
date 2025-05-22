@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hudplejequiz – woods_</title>
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+    
+<div class="quiz-wrapper">
+
+  <!-- Startskærm -->
+  <section id="quiz-start">
+    <h1>Lad os lære din hud at kende</h1>
+    <p>Vi guider dig frem til en rutine, der føles rigtig for dig.</p>
+    <input type="text" id="username-input" placeholder="Skriv dit navn her">
+    <button onclick="startQuiz()">Tag quizzen</button>
+  </section>
+
+  <!-- Progress bar -->
+  <ul class="quiz-step-indicator" id="progressbar">
+    <li class="step active">1</li>
+    <li class="step">2</li>
+    <li class="step">3</li>
+    <li class="step">4</li>
+    <li class="step">5</li>
+    <li class="step">6</li>
+    <li class="step">7</li>
+  </ul>
+
+ <!-- Spørgsmål 1 -->
+ <section class="quiz-question" id="question-1" style="display:none;">
+    <h2>Hvad er din primære hududfordring?</h2>
+    <p class="microcopy">Vi spørger, fordi det hjælper os med at finde de rigtige ingredienser til dig</p>
+  
+    <div class="grid-options">
+  
+      <label class="option-label">
+        <input type="checkbox" name="issue" value="dry">
+        <div class="option-box">
+          <img src="img/9023208_cactus_fill_icon.png" alt="Tørhed">
+          <span>Tørhed</span>
+        </div>
+      </label>
+  
+      <label class="option-label">
+        <input type="checkbox" name="issue" value="rosacea">
+        <div class="option-box">
+          <img src="img/9023548_heart_fill_icon.png" alt="Rosacea">
+          <span>Rosacea</span>
+        </div>
+      </label>
+  
+      <label class="option-label">
+        <input type="checkbox" name="issue" value="lines">
+        <div class="option-box">
+          <img src="img/9035176_time_clock_icon.png" alt="Fine linjer og rynker">
+          <span>Fine linjer og rynker</span>
+        </div>
+      </label>
+  
+      <label class="option-label">
+        <input type="checkbox" name="issue" value="sensitive">
+        <div class="option-box">
+          <img src="img/216657_leaf_icon.png" alt="Sensitiv hud eller rødme">
+          <span>Sensitiv hud eller rødme</span>
+        </div>
+      </label>
+  
+      <label class="option-label">
+        <input type="checkbox" name="issue" value="akne">
+        <div class="option-box">
+          <img src="img/216782_water_icon.png" alt="Akne eller bumser">
+          <span>Akne eller bumser</span>
+        </div>
+      </label>
+  
+      <label class="option-label">
+        <input type="checkbox" name="issue" value="none">
+        <div class="option-box">
+          <img src="img/5925616_emoji_face_happy_icon.png" alt="Ingen hudproblemer">
+          <span>Jeg har ingen specifikke hudproblematikker</span>
+        </div>
+      </label>
+  
+    </div>
+  
+    <button onclick="nextQuestion()">Næste</button>
+  </section>
+  
+  
+
+  <!-- Spørgsmål 2 -->
+  <section class="quiz-question" id="question-2" style="display:none;">
+    <h2>Hej, <span id="username-placeholder"></span><br>Hvor gammel er du?</h2>
+    <p class="microcopy">Vi spørger, fordi alder har betydning for hudens behov</p>
+    <input type="radio" id="age-under25" name="age" value="under25">
+<label for="age-under25">Under 25</label>
+
+<input type="radio" id="age-25-35" name="age" value="25-35">
+<label for="age-25-35">25 – 35</label>
+
+<input type="radio" id="age-36-45" name="age" value="36-45">
+<label for="age-36-45">36 – 45</label>
+
+<input type="radio" id="age-45plus" name="age" value="45plus">
+<label for="age-45plus">45+</label>
+
+    <div class="button-row">
+      <button onclick="prevQuestion()">Tilbage</button>
+      <button onclick="nextQuestion()">Næste</button>
+    </div>
+  </section>
+
+<!-- Spørgsmål 3 -->
+<section class="quiz-question" id="question-3" style="display:none;">
+    <h2>Hvilke effekter ønsker du af din hudplejerutine?</h2>
+    <p class="microcopy">Vælg det mål, der bedst matcher dine behov</p>
+  
+    <div class="radio-group">
+      <input type="radio" id="goal1" name="goal" value="fugt">
+      <label for="goal1">Den skal afhjælpe tørhed ved at holde min hud fugtmættet</label>
+  
+      <input type="radio" id="goal2" name="goal" value="rosacea">
+      <label for="goal2">Den skal dulme rosacea</label>
+  
+      <input type="radio" id="goal3" name="goal" value="linjer">
+      <label for="goal3">Den skal minimere og forebygge fine linjer og rynker</label>
+  
+      <input type="radio" id="goal4" name="goal" value="sundbeskyttet">
+      <label for="goal4">Den skal holde min sunde hud sund, ensartet og beskyttet</label>
+  
+      <input type="radio" id="goal5" name="goal" value="porer">
+      <label for="goal5">Den skal minimere forstørrede porer</label>
+  
+      <input type="radio" id="goal6" name="goal" value="roedme">
+      <label for="goal6">Den skal minimere rødme og sensitivitet</label>
+  
+      <input type="radio" id="goal7" name="goal" value="kombineret">
+      <label for="goal7">Den skal balancere min kombinerede hud</label>
+    </div>
+  
+    <div class="button-row">
+      <button onclick="prevQuestion()">TILBAGE</button>
+      <button onclick="nextQuestion()">NÆSTE</button>
+    </div>
+  </section>
+  
+  
+
+  <!-- Spørgsmål 4 -->
+  <section class="quiz-question" id="question-4" style="display:none;">
+    <h2>Hvor mange trin ønsker du i din rutine?</h2>
+    <p class="microcopy">Vi spørger for at tilpasse din løsning til din hverdag</p>
+    
+    <div class="radio-group">
+      <input type="radio" id="routine1" name="routine" value="1-3">
+      <label for="routine1">1 – 3 (så få som muligt)</label>
+  
+      <input type="radio" id="routine2" name="routine" value="4-5">
+      <label for="routine2">4 – 5</label>
+  
+      <input type="radio" id="routine3" name="routine" value="6plus">
+      <label for="routine3">Så mange som det kræver</label>
+    </div>
+  
+    <div class="button-row">
+      <button onclick="prevQuestion()">Tilbage</button>
+      <button onclick="nextQuestion()">Næste</button>
+    </div>
+  </section>
+  
+  
+
+  <!-- Spørgsmål 5 -->
+  <section class="quiz-question" id="question-5" style="display:none;">
+    <h2>Gælder nogle af disse for dig?</h2>
+  
+    <div class="checkbox-group">
+      <input type="checkbox" id="gravid" name="condition" value="gravid">
+      <label for="gravid">Jeg er gravid / ammer</label>
+  
+      <input type="checkbox" id="medicin" name="condition" value="medicin">
+      <label for="medicin">Jeg tager medicin mod akne / rosacea</label>
+  
+      <input type="checkbox" id="parfume" name="condition" value="parfume">
+      <label for="parfume">Jeg reagerer på parfume</label>
+  
+      <input type="checkbox" id="ingen" name="condition" value="ingen">
+      <label for="ingen">Nej, ingen af disse</label>
+    </div>
+  
+    <div class="button-row">
+      <button onclick="prevQuestion()">Tilbage</button>
+      <button onclick="nextQuestion()">Næste</button>
+    </div>
+  </section>
+  
+
+  <!-- Spørgsmål 6 -->
+  <section class="quiz-question" id="question-6" style="display:none;">
+    <h2>Hvor bor du?</h2>
+    <p class="microcopy">Din hud eksponeres forskelligt afhængigt af miljøet</p>
+  
+    <div class="radio-group location-group">
+      <input type="radio" id="storby" name="location" value="storby">
+      <label for="storby">I en storby</label>
+  
+      <input type="radio" id="mindreby" name="location" value="mindreby">
+      <label for="mindreby">Et mindre byområde</label>
+  
+      <input type="radio" id="landet" name="location" value="landet">
+      <label for="landet">På landet</label>
+    </div>
+  
+    <div class="button-row">
+      <button onclick="prevQuestion()">Tilbage</button>
+      <button onclick="nextQuestion()">Se min anbefaling</button>
+    </div>
+  </section>
+  
+
+<!-- Resultatside -->
+<section id="quiz-result" style="display: none;">
+    <div class="quiz-content-wrapper">
+      <h2 class="quiz-result-heading">Her er dine personlige anbefalinger</h2>
+      <p class="quiz-result-subtext">
+        Din hud er unik, og det skal din pleje også være. Herunder finder du produkter, der er
+        tilpasset dine svar og hjælper dig med at skabe balance, ro og resultater – uden at gå
+        på kompromis med noget.
+      </p>
+    </div>
+  
+    <div class="slider-section">
+      <div class="best-sellers-slider">
+        <div class="slider-card">
+          <div class="product-image-wrapper">
+            <div class="rating-bar">
+              <div class="stars-wrapper">
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(20)</span>
+              </div>
+            </div>
+            <img src="img/DAILY HYDRA CREAM GREY BACKGROUND.jpg" alt="Daily Hydra Cream">
+          </div>
+          <div class="product-info">
+            <p class="product-name">Daily Hydra Cream</p>
+            <p class="product-price">329,00 DKK</p>
+            <button class="add-to-cart">LÆG I KURV</button>
+          </div>
+        </div>
+  
+        <div class="slider-card">
+          <div class="product-image-wrapper">
+            <div class="rating-bar">
+              <div class="stars-wrapper">
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(20)</span>
+              </div>
+            </div>
+            <img src="img/NIACINAMIDE LIFTING MIST GREY BACKGROUND.jpg" alt="Niacinamide Lifting Mist">
+          </div>
+          <div class="product-info">
+            <p class="product-name">Niacinamide Lifting Mist</p>
+            <p class="product-price">219,00 DKK</p>
+            <button class="add-to-cart">LÆG I KURV</button>
+          </div>
+        </div>
+  
+        <div class="slider-card">
+          <div class="product-image-wrapper">
+            <div class="rating-bar">
+              <div class="stars-wrapper">
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(25)</span>
+              </div>
+            </div>
+            <img src="img/FACIAL SUNSCREEN 30 SPF GREY BACKGROUND.jpg" alt="Facial Sunscreen SPF 30">
+          </div>
+          <div class="product-info">
+            <p class="product-name">Facial Sunscreen SPF 30</p>
+            <p class="product-price">179,00 DKK</p>
+            <button class="add-to-cart">LÆG I KURV</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="slider-indicator">
+        <div class="slider-progress-bar"></div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+
+</div>
+
+<script src="quiz.js"></script>
+</body>
+</html>
