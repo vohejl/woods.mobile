@@ -3,8 +3,7 @@
 Dette repository indeholder den kodede løsning til min hovedopgave, hvor jeg har arbejdet med at optimere Woods Copenhagens mobile weboplevelse. Projektet er udviklet som afslutning på multimediedesignuddannelsen ved Erhvervsakademi Aarhus, forår 2025.
 
 Formål: 
-Formålet med projektet har været at forbedre den mobile brugeroplevelse hos woods_, med fokus på struktur, æstetik, funktionalitet og konvertering. Designet tager afsæt i Double Diamond-modellen og er udviklet gennem en brugercentreret og iterativ proces.
-
+Formålet med projektet har været at forbedre den mobile brugeroplevelse hos woods_, med fokus på struktur, æstetik, funktionalitet og konvertering.
 
 Funktioner og indhold: 
 - Mobiloptimeret løsning i HTML, CSS og JavaScript
@@ -13,6 +12,7 @@ Funktioner og indhold:
 - Placeholder-sider (missing.html) til funktioner der ikke er implementeret
 
 Du kan se siden her:   [https://vohejl.github.io/woods.mobile/](https://vohejl.github.io/woods.mobile/)
+Du kan se siden her: [https://woods-mobile.vercel.app](https://woods-mobile.vercel.app) 
 
 
 
